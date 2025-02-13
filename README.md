@@ -93,6 +93,11 @@ Build the electron app
 Create the application installer.  The example for MacOS is:
 
     cd electron-app    
-    yarn electron-builder --mac 
+    yarn electron-builder --mac --universal
 
-For windows replace `--mac` with `--win` (or for Linux replace with `--linux deb`)
+Create the application installer.  The example for Windows is:
+
+    cd electron-app    
+    yarn electron-builder --win
+
+For Linux replace with `--linux deb`
