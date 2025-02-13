@@ -100,4 +100,4 @@ Create the application installer.  The example for Windows is:
     cd electron-app    
     yarn electron-builder --win
 
-For Linux replace with `--linux deb`
+For Linux replace `--win` with `--linux deb`
