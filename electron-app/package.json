@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "@theia/cli": "1.57.1",
-    "electron": "^30.1.2"
+    "electron": "30.5.1",
+    "electron-builder": "^25.1.8"
   },
   "scripts": {
     "bundle": "yarn rebuild && theia build --mode development",
@@ -30,5 +31,25 @@
   },
   "theia": {
     "target": "electron"
+  },
+  "build": {
+    "appId": "com.example.theia",
+    "productName": "LabelMaker",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "lib/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   }
 }
